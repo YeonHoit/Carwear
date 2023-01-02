@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 상단 바 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical" />
+
+    <!-- 게시판 선택 바가 들어가는 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.75"
+        android:orientation="horizontal">
+
+        <!-- 선택 차종 게시판 TextView Layout -->
+        <LinearLayout
+            android:id="@+id/Car_Type_Board_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/community_nav_selected">
+
+            <!-- 선택 차종 TextView -->
+            <TextView
+                android:id="@+id/Car_Type_Board_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="아반떼 MD"
+                android:gravity="center"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:textSize="20sp"
+                android:textColor="#262C3A"/>
+
+        </LinearLayout>
+
+        <!-- 자유 게시판 TextView Layout -->
+        <LinearLayout
+            android:id="@+id/Free_Board_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/community_nav_none_selected">
+
+            <!-- 자유 게시판 TextView -->
+            <TextView
+                android:id="@+id/Free_Board_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="자유 게시판"
+                android:gravity="center"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:textSize="20sp"
+                android:textColor="#666666"/>
+
+        </LinearLayout>
+
+        <!-- 중고장터 TextView Layout -->
+        <LinearLayout
+            android:id="@+id/Used_Shop_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/community_nav_none_selected">
+
+            <!-- 중고장터 TextView -->
+            <TextView
+                android:id="@+id/Used_Shop_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="중고장터"
+                android:gravity="center"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:textSize="20sp"
+                android:textColor="#666666"/>
+
+        </LinearLayout>
+
+   </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/Swipe_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6.25">
+
+        <!-- 커뮤니티 RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Community_Post_RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F3F3F3" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- 글 쓰기 TextView -->
+    <TextView
+        android:id="@+id/Community_Post_Write_Button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="#262C3A"
+        android:text="글쓰기"
+        android:textSize="20sp"
+        android:textColor="#FFF"
+        android:gravity="center"
+        android:fontFamily="@font/nanumsquare_acb"/>
+
+</LinearLayout>

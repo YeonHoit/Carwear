@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.inspier.carstyle"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'com.google.android.material:material:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //네이버 로그인 항목
+    implementation files('libs/naveridlogin_android_sdk_4.2.5.aar')
+    implementation 'com.android.support:appcompat-v7:30.0.2'
+    implementation 'com.android.support:support-core-utils:30.0.2'
+    implementation 'com.android.support:customtabs:30.0.2'
+    implementation 'com.android.support:support-v4:30.0.2'
+
+    //카카오 로그인 항목
+    implementation group: project.KAKAO_SDK_GROUP, name: 'usermgmt', version: project.KAKAO_SDK_VERSION
+
+    //네이버 지도 SDK
+    implementation 'com.naver.maps:map-sdk:3.10.0'
+    implementation 'com.google.code.gson:gson:2.6.1'
+
+    //FCM
+    implementation 'com.google.firebase:firebase-messaging:17.0.0'
+
+    //Ted permission
+    implementation 'gun0912.ted:tedpermission:2.1.0'
+
+    //ViewPager2(홈 화면 정보 띄우는 Slide ImageView 제작)
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    //SlidingUpPanelLayout
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

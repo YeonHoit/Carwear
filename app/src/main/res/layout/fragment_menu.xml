@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3">
+
+    <!-- 개인 정보 및 아이콘 표시 Layout -->
+    <RelativeLayout
+        android:id="@+id/Menu_Profile_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+
+        <!-- 사용자의 프로필 사진이 표시되는 ImageView -->
+        <com.inspier.carstyle.RoundImageView
+            android:id="@+id/Menu_Profile_ImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/round_imageview"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/avante_md" />
+
+        <!-- 안녕하세요 000님! TextView -->
+        <TextView
+            android:id="@+id/Menu_Profile_NickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="안녕하세요 000님!"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:layout_toRightOf="@+id/Menu_Profile_ImageView"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="20dp" />
+
+        <!-- 내 차종을 보여주는 TextView -->
+        <TextView
+            android:id="@+id/Menu_Profile_UserCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대표 차종 : 아반떼 MD"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:layout_below="@+id/Menu_Profile_NickName"
+            android:layout_toRightOf="@+id/Menu_Profile_ImageView"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp" />
+
+        <!-- MyPage로 이동하는 FrameLayout -->
+        <FrameLayout
+            android:id="@+id/Menu_MyPage"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="75dp">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="38dp"
+                android:src="@drawable/pass"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="20dp"/>
+
+        </FrameLayout>
+
+        <!-- 매칭 내역 Layout -->
+        <RelativeLayout
+            android:id="@+id/Menu_Matching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Menu_Profile_ImageView"
+            android:layout_toLeftOf="@id/Menu_Inquire_One_One"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="80dp">
+
+            <!-- 매칭 내역 ImageView -->
+            <ImageView
+                android:id="@+id/Menu_Matching_ImageView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/matching"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <!-- 매칭 내역 TextView -->
+            <TextView
+                android:id="@+id/Menu_Matching_TextView"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="매칭 내역"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:textColor="#555555"
+                android:textSize="14sp"
+                android:layout_below="@+id/Menu_Matching_ImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <!-- 1:1 문의 Layout -->
+        <RelativeLayout
+            android:id="@+id/Menu_Inquire_One_One"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Menu_Profile_ImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp">
+
+            <!-- 1:1 문의 ImageView -->
+            <ImageView
+                android:id="@+id/Menu_Inquire_One_One_ImageView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/inquire_one_one"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <!-- 1:1 문의 TextView -->
+            <TextView
+                android:id="@+id/Menu_Inquire_One_One_TextView"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1:1 문의"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:textColor="#555555"
+                android:textSize="14sp"
+                android:layout_below="@id/Menu_Inquire_One_One_ImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <!-- 찜한샵 Layout -->
+        <RelativeLayout
+            android:id="@+id/Menu_Zzim_Shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Menu_Profile_ImageView"
+            android:layout_toRightOf="@+id/Menu_Inquire_One_One"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="80dp">
+
+            <!-- 찜한샵 ImageView -->
+            <ImageView
+                android:id="@+id/Menu_Zzim_Shop_ImageView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/zzim_shop"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <!-- 찜한샵 TextView -->
+            <TextView
+                android:id="@+id/Menu_Zzim_Shop_TextView"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="찜한샵"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:textColor="#555555"
+                android:textSize="14sp"
+                android:layout_below="@id/Menu_Zzim_Shop_ImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <!-- 알림설정 Layout -->
+        <RelativeLayout
+            android:id="@+id/Menu_Alert_Setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Menu_Matching"
+            android:layout_toLeftOf="@+id/Menu_Hot_List"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="80dp">
+
+            <!-- 알림설정 ImageView -->
+            <ImageView
+                android:id="@+id/Menu_Alert_Setting_ImageView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/alert_setting"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <!-- 알림설정 TextView -->
+            <TextView
+                android:id="@+id/Menu_Alert_Setting_TextView"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="알림설정"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:textColor="#555555"
+                android:textSize="14sp"
+                android:layout_below="@+id/Menu_Alert_Setting_ImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <!-- 즐겨찾기 Layout -->
+        <RelativeLayout
+            android:id="@+id/Menu_Hot_List"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Menu_Inquire_One_One"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp">
+
+            <!-- 즐겨찾기 Imageview -->
+            <ImageView
+                android:id="@+id/Menu_Hot_List_ImageView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/star"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <!-- 즐겨찾기 TextView -->
+            <TextView
+                android:id="@+id/Menu_Hot_List_TextView"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="즐겨찾기"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:textColor="#555555"
+                android:textSize="14sp"
+                android:layout_below="@id/Menu_Hot_List_ImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <!-- 계정 관리 Layout -->
+        <RelativeLayout
+            android:id="@+id/Menu_Account_Setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Menu_Zzim_Shop"
+            android:layout_toRightOf="@+id/Menu_Hot_List"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="80dp">
+
+            <!-- 계정 관리 ImageView -->
+            <ImageView
+                android:id="@+id/Menu_Account_Setting_ImageView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/account_setting"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <!-- 계정 관리 TextView -->
+            <TextView
+                android:id="@+id/Menu_Account_Setting_TextView"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="계정 관리"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:textColor="#555555"
+                android:textSize="14sp"
+                android:layout_below="@+id/Menu_Account_Setting_ImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- 이용 안내와 버전 정보를 보여주는 Layout -->
+    <RelativeLayout
+        android:id="@+id/Menu_Info_Version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Menu_Profile_Layout"
+        android:layout_marginTop="40dp"
+        android:background="#FFF"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+
+        <!-- 이용 안내 Layout -->
+        <RelativeLayout
+            android:id="@+id/Menu_Info_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="2dp">
+
+            <!-- 이용 안내 TextView -->
+            <TextView
+                android:id="@+id/Menu_Info_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="25dp"
+                android:layout_marginLeft="60dp"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:text="이용 안내"
+                android:textColor="#555555"
+                android:textSize="16sp" />
+
+            <!-- 이용 안내 ImageView -->
+            <ImageView
+                android:id="@+id/Menu_Info_ImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/pass" />
+
+        </RelativeLayout>
+
+        <!-- 이용 안내와 버전 정보를 나누는 선 Layout -->
+        <RelativeLayout
+            android:id="@+id/Menu_Info_Version_Devide"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BBBBBB"
+            android:layout_below="@+id/Menu_Info_Layout"
+            android:layout_marginHorizontal="30dp"/>
+
+        <!-- 버전 정보 Layout -->
+        <RelativeLayout
+            android:id="@+id/Menu_Version_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Menu_Info_Version_Devide"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true">
+
+            <!-- 버전 정보 TextView -->
+            <TextView
+                android:id="@+id/Menu_Version_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버전 정보"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="25dp"
+                android:layout_marginLeft="60dp"/>
+
+            <!-- 버전 정보 현재 TextView -->
+            <TextView
+                android:id="@+id/Menu_Version_Present"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="현재 1.0.0 / 최신 "
+                android:textSize="14sp"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/Menu_Version_New"/>
+
+            <!-- 버전 정보 최신 TextView -->
+            <TextView
+                android:id="@+id/Menu_Version_New"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.0.0"
+                android:textSize="14sp"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- 로그아웃 Layout -->
+    <RelativeLayout
+        android:id="@+id/Menu_Logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Menu_Info_Version"
+        android:layout_marginTop="40dp"
+        android:background="#FFF"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+
+        <!-- 로그아웃 TextView -->
+        <TextView
+            android:id="@+id/Menu_Logout_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그아웃"
+            android:textSize="16sp"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:textColor="#555555"
+            android:layout_centerInParent="true"
+            android:layout_marginVertical="25dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

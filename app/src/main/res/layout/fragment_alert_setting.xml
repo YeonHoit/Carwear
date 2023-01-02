@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#F3F3F3">
+
+    <!-- 알림 설정 Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+
+        <!-- 뒤로 가기 버튼 FrameLayout -->
+        <FrameLayout
+            android:id="@+id/AlertSetting_Back_Button"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="48dp"
+            android:layout_marginLeft="13dp">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="27dp"
+                android:src="@drawable/back_button"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <!-- 댓글 알림 TextView -->
+        <TextView
+            android:id="@+id/AlertSetting_Comment_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="댓글 알림 (꺼짐)"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/AlertSetting_Back_Button"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"/>
+
+        <!-- 댓글 알림 Switch -->
+        <Switch
+            android:id="@+id/AlertSetting_Comment_Switch"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:track="@drawable/switch_track_selector"
+            android:thumb="@drawable/switch_thumb"
+            android:layout_alignTop="@+id/AlertSetting_Comment_TextView"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"/>
+
+        <!-- 좋아요 알림 TextView -->
+        <TextView
+            android:id="@+id/AlertSetting_Like_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="좋아요 알림 (꺼짐)"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/AlertSetting_Comment_TextView"
+            android:layout_marginTop="20dp"
+            android:layout_alignLeft="@+id/AlertSetting_Comment_TextView"/>
+
+        <!-- 좋아요 알림 Switch -->
+        <Switch
+            android:id="@+id/AlertSetting_Like_Switch"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:track="@drawable/switch_track_selector"
+            android:thumb="@drawable/switch_thumb"
+            android:layout_alignTop="@+id/AlertSetting_Like_TextView"
+            android:layout_alignRight="@+id/AlertSetting_Comment_Switch"/>
+
+        <!-- 댓글 태그 알림 TextView -->
+        <TextView
+            android:id="@+id/AlertSetting_Tag_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="댓글 태그 알림 (꺼짐)"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:gravity="center_vertical"
+            android:layout_below="@id/AlertSetting_Like_TextView"
+            android:layout_marginTop="20dp"
+            android:layout_alignLeft="@+id/AlertSetting_Like_TextView"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- 댓글 태그 알림 Switch -->
+        <Switch
+            android:id="@+id/AlertSetting_Tag_Switch"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:track="@drawable/switch_track_selector"
+            android:thumb="@drawable/switch_thumb"
+            android:layout_alignTop="@+id/AlertSetting_Tag_TextView"
+            android:layout_alignRight="@+id/AlertSetting_Like_Switch"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

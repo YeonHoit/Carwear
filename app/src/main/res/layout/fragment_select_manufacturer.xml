@@ -1,0 +1,1705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 상단 바 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+        <!-- 상단 바 위쪽 빈 공간 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+        <!-- 상단 바가 들어가는 layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- TextView 왼쪽 빈 공간 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="vertical" />
+
+            <!-- 제조사 TextView -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="제조사"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:fontFamily="@font/nanumsquare_acb" />
+
+            <!-- TextView와 닫기 버튼 사이의 빈 공간 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.7"
+                android:orientation="vertical" />
+
+            <!-- 닫기 버튼이 들어가는 Layout -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <!-- 닫기 버튼 -->
+                <Button
+                    android:id="@+id/SelectManuFacturer_Close_Button"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/close_262c3a"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <!-- 닫기 버튼 오른쪽 빈 공간 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 제조사 ScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7.2"
+        android:overScrollMode="never"
+        android:background="#FFF">
+
+        <!-- 제조사 ScrollView 하위 Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 국내 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:background="#F9F9F9">
+
+                <!-- 국내 제조사 TextView 왼쪽 빈 공간 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical" />
+
+                <!-- 국내 제조사 TextView -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="국내 제조사"
+                    android:fontFamily="@font/nanumsquare_acb"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="#555555" />
+
+                <!-- 국내 제조사 TextView 오른쪽 빈 공간 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.7"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- 현대, 기아 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- 현대, 기아 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- 현대, 기아 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- 현대 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- 현대 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_hyundai"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/hyundai"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- 현대, 기아 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- 기아 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_kia"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/kia"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- 기아 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- 현대, 기아 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- 쉐보레, 르노 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- 쉐보레, 르노 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- 쉐보레, 르노 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- 쉐보레 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- 쉐보레 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_chevrolet"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/chevrolet"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- 쉐보레, 르노 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- 르노 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_renalut"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/renault"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- 르노 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- 쉐보레, 르노 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- 쌍용, 제네시스 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- 쌍용, 제네시스 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- 쌍용, 제네시스 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- 쌍용 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- 쌍용 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_ssangyong"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/ssangyong"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- 쌍용, 제네시스 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- 제네시스 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_genesis"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/genesis"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- 제네시스 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- 쌍용, 제네시스 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- 해외 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:background="#F9F9F9">
+
+                <!-- 해외 제조사 TextView 왼쪽 빈 공간 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical" />
+
+                <!-- 해외 제조사 TextView -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="해외 제조사"
+                    android:fontFamily="@font/nanumsquare_acb"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="#555555" />
+
+                <!-- 해외 제조사 TextView 오른쪽 빈 공간 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.7"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- alfaromeo, audi 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- alfaromeo, audi 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- alfaromeo, audi 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- alfaromeo 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- alfaromeo 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_alfaromeo"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/alfaromeo"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- alfaromeo, audi 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- audi 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_audi"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/audi"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- audi 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- alfaromeo, audi 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- benz, bmw 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- benz, bmw 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- benz, bmw 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- benz 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- benz 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_benz"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/benz"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- benz, bmw 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- bmw 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_bmw"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/bmw"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- bmw 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- benz, bmw 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- cadillac, chrysler 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- cadillac, chrysler 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- cadillac, chrysler 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- cadillac 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- cadillac 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_cadillac"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/cadillac"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- cadillac, chrysler 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- chrysler 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_chrysler"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/chrysler"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- chrysler 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- cadillac, chrysler 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- citroen, dodge 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- citroen, dodge 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- citroen, dodge 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- citroen 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- citroen 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_citroen"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/citroen"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- citroen, dodge 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- dodge 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_dodge"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/dodge"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- dodge 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- citroen, dodge 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- ferrari, fiat 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- ferrari, fiat 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- ferrari, fiat 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- ferrari 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- ferrari 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_ferrari"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/ferrari"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- ferrari, fiat 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- fiat 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_fiat"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/fiat"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- fiat 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- ferrari, fiat 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- ford, honda 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- ford, honda 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- ford, honda 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- ford 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- ford 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_ford"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/ford"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- ford, honda 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- honda 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_honda"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/honda"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- honda 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- ford, honda 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- hummer, infiniti 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- hummer, infiniti 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- hummer, infiniti 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- hummer 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- hummer 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_hummer"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/hummer"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- hummer, infiniti 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- infiniti 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_infiniti"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/infiniti"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- infiniti 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- hummer, infiniti 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- jaguar, jeep 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- jaguar, jeep 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- jaguar, jeep 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- jaguar 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- jaguar 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_jaguar"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/jaguar"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- jaguar, jeep 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- jeep 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_jeep"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/jeep"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- jeep 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- jaguar, jeep 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- landrover, lexus 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- landrover, lexus 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- landrover, lexus 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- landrover 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- landrover 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_landrover"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/landrover"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- landrover, lexus 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- lexus 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_lexus"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/lexus"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- lexus 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- landrover, lexus 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- lincoln, maserati 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- lincoln, maserati 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- lincoln, maserati 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- lincoln 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- lincoln 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_lincoln"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/lincoln"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- lincoln, maserati 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- maserati 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_maserati"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/maserati"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- maserati 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- lincoln, maserati 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- mazda, mini 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- mazda, mini 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- mazda, mini 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- mazda 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- mazda 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_mazda"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/mazda"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- mazda, mini 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- mini 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_mini"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/mini"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- mini 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- mazda, mini 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- mitsubishi, nissan 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- mitsubishi, nissan 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- mitsubishi, nissan 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- mitsubishi 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- mitsubishi 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_mitsubishi"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/mitsubishi"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- mitsubishi, nissan 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- nissan 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_nissan"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/nissan"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- nissan 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- mitsubishi, nissan 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- peugeot, porsche 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- peugeot, porsche 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- peugeot, porsche 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- peugeot 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- peugeot 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_peugeot"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/peugeot"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- peugeot, porsche 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- porsche 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_porsche"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/porsche"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- porsche 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- peugeot, porsche 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- subaru, suzuki 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- subaru, suzuki 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- subaru, suzuki 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- subaru 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- subaru 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_subaru"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/subaru"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- subaru, suzuki 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- suzuki 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_suzuki"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/suzuki"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- suzuki 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- subaru, suzuki 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- tesla, toyota 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- tesla, toyota 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- tesla, toyota 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- tesla 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- tesla 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_tesla"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/tesla"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- tesla, toyota 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- toyota 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_toyota"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/toyota"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- toyota 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- tesla, toyota 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <!-- volkswagen, volvo 제조사 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <!-- volkswagen, volvo 제조사 ImageView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- volkswagen, volvo 제조사 ImageView Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <!-- volkswagen 제조사 왼쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- volkswagen 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_volkswagen"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/volkswagen"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- volkswagen, volvo 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <!-- volvo 제조사 ImageView -->
+                    <FrameLayout
+                        android:id="@+id/Manu_volvo"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/car_select_background">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/volvo"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"/>
+
+                    </FrameLayout>
+
+                    <!-- volvo 제조사 오른쪽 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <!-- volkswagen, volvo 제조사 ImageView 아래쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

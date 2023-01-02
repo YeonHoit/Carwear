@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="250dp">
+
+    <!-- 게시글 내용이 들어가는 Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/post_background"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="15dp">
+
+        <!-- 게시판 종류 TextView -->
+        <TextView
+            android:id="@+id/Community_Post_Board_Name"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:background="@drawable/round_square_fill"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="#FFF"
+            android:fontFamily="@font/nanumsquare_aceb"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginLeft="25dp"/>
+
+        <!-- 수정 버튼이 들어가는 Layout -->
+        <FrameLayout
+            android:id="@+id/Community_Post_Dots"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="39dp"
+                android:src="@drawable/dots_three_vertical"
+                android:scaleType="center"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <!-- 글의 제목이 들어가는 TextView -->
+        <TextView
+            android:id="@+id/Community_Post_Title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:layout_below="@+id/Community_Post_Board_Name"
+            android:layout_marginTop="12.5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toLeftOf="@+id/Community_Post_ImageView"
+            android:layout_marginRight="10dp"/>
+
+        <!-- 글의 내용 일부가 들어가는 TextView -->
+        <TextView
+            android:id="@+id/Community_Post_Contents"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:layout_below="@+id/Community_Post_Title"
+            android:layout_alignLeft="@+id/Community_Post_Title"
+            android:layout_toLeftOf="@+id/Community_Post_ImageView"
+            android:layout_marginRight="10dp"/>
+
+        <!-- 글의 사진이 들어가는 Layout -->
+        <ImageView
+            android:id="@+id/Community_Post_ImageView"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_alignTop="@+id/Community_Post_Title"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginRight="10dp"/>
+
+        <!-- 닉네임 TextView -->
+        <TextView
+            android:id="@+id/Community_Post_NickName"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="닉네임"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:layout_below="@+id/Community_Post_Contents"
+            android:layout_alignLeft="@+id/Community_Post_Contents"
+            android:layout_marginTop="12.5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="20dp"/>
+
+        <!-- 작성시간 ImageView -->
+        <ImageView
+            android:id="@+id/Community_Post_WriteTime_ImageView"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:src="@drawable/circular_wall_clock"
+            android:scaleType="center"
+            android:layout_alignTop="@+id/Community_Post_NickName"
+            android:layout_toRightOf="@+id/Community_Post_NickName"/>
+
+        <!-- 작성시간 TextView -->
+        <TextView
+            android:id="@+id/Community_Post_WriteTime"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="####/##/##"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="20dp"
+            android:layout_alignTop="@+id/Community_Post_WriteTime_ImageView"
+            android:layout_toRightOf="@+id/Community_Post_WriteTime_ImageView"/>
+
+        <!-- 조회수 ImageView -->
+        <ImageView
+            android:id="@+id/Community_Post_Views_ImageView"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:src="@drawable/post_views"
+            android:layout_alignTop="@id/Community_Post_WriteTime"
+            android:layout_toRightOf="@+id/Community_Post_WriteTime"/>
+
+        <!-- 조회수 TextView -->
+        <TextView
+            android:id="@+id/Community_Post_Views"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="123"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:layout_alignTop="@+id/Community_Post_Views_ImageView"
+            android:layout_toRightOf="@+id/Community_Post_Views_ImageView"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

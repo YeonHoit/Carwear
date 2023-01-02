@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 상단 바 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        android:background="#FFF">
+
+        <!-- 뒤로 가기와 완료 버튼 위쪽 빈 공간 Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+        <!-- 뒤로 가기와 완료 버튼이 들어가는 Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- 뒤로 가기 버튼 왼쪽 빈 공간 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:orientation="vertical" />
+
+            <!-- 뒤로 가기 버튼이 들어가는 Layout -->
+            <FrameLayout
+                android:id="@+id/Community_Post_Retouch_Back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/back_button"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <!-- 뒤로 가기와 완료 버튼 사이 빈 공간 Layout -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7.2"
+                android:orientation="vertical" />
+
+            <!-- 완료 TextView(Button) -->
+            <TextView
+                android:id="@+id/Community_Post_Retouch_Finish"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="수정"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textColor="#262C3A"
+                android:fontFamily="@font/nanumsquare_acb" />
+
+            <!-- 완료 버튼 오른쪽 빈 공간 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 글쓰기 공간이 들어가는 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7.2"
+        android:orientation="horizontal">
+
+        <!-- 글쓰기 왼쪽 빈 공간 Layout -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+        <!-- 글쓰기 공간이 들어가는 Layout -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:orientation="vertical">
+
+            <!-- 게시판 선택 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!-- 선택 차종 Button -->
+                <LinearLayout
+                    android:id="@+id/Post_Retouch_UserCar_Button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/community_nav_selected">
+
+                    <!-- 선택 차종 Button TextView -->
+                    <TextView
+                        android:id="@+id/Post_Retouch_UserCar_TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="아반떼 MD"
+                        android:gravity="center"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:textSize="20sp"
+                        android:textColor="#262C3A" />
+
+                </LinearLayout>
+
+                <!-- 자유 게시판 Button -->
+                <LinearLayout
+                    android:id="@+id/Post_Retouch_FreeBoard_Button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/community_nav_none_selected">
+
+                    <!-- 자유 게시판 Button TextView -->
+                    <TextView
+                        android:id="@+id/Post_Retouch_FreeBoard_TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="자유 게시판"
+                        android:gravity="center"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:textSize="20sp"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <!-- 중고장터 Button -->
+                <LinearLayout
+                    android:id="@+id/Post_Retouch_UsedMarket_Button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/community_nav_none_selected">
+
+                    <!-- 중고장터 Button TextView -->
+                    <TextView
+                        android:id="@+id/Post_Retouch_UsedMarket_TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="중고 장터"
+                        android:gravity="center"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:textSize="20sp"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 제목 EditText -->
+            <EditText
+                android:id="@+id/Community_Post_Retouch_Title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="제목"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:theme="@style/EditTextTheme"/>
+
+            <!-- Scroll View -->
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/Post_Retouch_ScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9">
+
+                <!-- 스크롤 되는 항목들을 감싸고 있는 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 제목과 내용 입력 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:orientation="vertical" />
+
+                    <!-- 내용 입력 EditText -->
+                    <EditText
+                        android:id="@+id/Community_Post_Retouch_Contents"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="내용 입력"
+                        android:background="#FFF"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:paddingLeft="5dp"
+                        android:theme="@style/EditTextTheme"/>
+
+                    <!-- 내용 입력과 사진 등록 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="vertical" />
+
+                    <!-- 위쪽 사진 등록 Layout -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 사진 등록 Layout 1 -->
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <!-- 사진 등록 ImageView 1 -->
+                            <ImageView
+                                android:id="@+id/Community_Post_Retouch_ImageView1"
+                                android:layout_width="160dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/photo_plus" />
+
+                        </FrameLayout>
+
+                        <!-- 사진 등록 Layout 2 -->
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <!-- 사진 등록 ImageView 2 -->
+                            <ImageView
+                                android:id="@+id/Community_Post_Retouch_ImageView2"
+                                android:layout_width="160dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/photo_plus"
+                                android:visibility="gone"/>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <!-- 위쪽 사진 등록과 아래쪽 사진 등록 사이 빈 공간 Layout -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="vertical" />
+
+                    <!-- 아래쪽 사진 등록 Layout -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 사진 등록 Layout 3 -->
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <!-- 사진 등록 ImageView 3 -->
+                            <ImageView
+                                android:id="@+id/Community_Post_Retouch_ImageView3"
+                                android:layout_width="160dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/photo_plus"
+                                android:visibility="gone"/>
+
+                        </FrameLayout>
+
+                        <!-- 사진 등록 Layout 4 -->
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <!-- 사진 등록 ImageView 4 -->
+                            <ImageView
+                                android:id="@+id/Community_Post_Retouch_ImageView4"
+                                android:layout_width="160dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/photo_plus"
+                                android:visibility="gone"/>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <!-- 글쓰기 오른쪽 빈 공간 Layout -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</LinearLayout>

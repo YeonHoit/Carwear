@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#F3F3F3">
+
+    <!-- 계정 관리 Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+        
+        <!-- 뒤로 가기 버튼 FrameLayout -->
+        <FrameLayout
+            android:id="@+id/AccountSetting_Back_Button"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="48dp"
+            android:layout_marginLeft="13dp">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="27dp"
+                android:src="@drawable/back_button"
+                android:layout_gravity="center"/>
+            
+        </FrameLayout>
+
+        <!-- 탈퇴하기 TextView -->
+        <TextView
+            android:id="@+id/AccountSetting_Drop_Out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="탈퇴하기"
+            android:textSize="16sp"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:textColor="#555555"
+            android:gravity="center"
+            android:paddingVertical="25dp"
+            android:layout_below="@+id/AccountSetting_Back_Button"
+            android:layout_marginTop="20dp" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

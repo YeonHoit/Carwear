@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "613461478835",
+    "project_id": "carwear-8118e",
+    "storage_bucket": "carwear-8118e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613461478835:android:b83371d377aed2c2cc4fc6",
+        "android_client_info": {
+          "package_name": "com.inspier.carstyle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613461478835-9a684ora1bbjinn0vg06krv6fcvtnlfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQLWAtWBzoz76kGIhk0B7Wz5QFOvqyzyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613461478835-9a684ora1bbjinn0vg06krv6fcvtnlfv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

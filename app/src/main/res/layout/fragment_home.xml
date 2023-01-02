@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Home 화면 ScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 자동차 선택, 가상 튜닝 하기, 배경 화면 사진 Layout -->
+            <RelativeLayout
+                android:id="@+id/Home_Car_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="525dp"
+                android:background="@drawable/test_car"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true">
+
+                <!-- 자동차 선택, 가상 튜닝 하기 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="450dp">
+
+                    <!-- 자동차 선택 Layout -->
+                    <RelativeLayout
+                        android:id="@+id/Select_Car_Button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true">
+
+                            <!-- 자동차 선택 ImageView -->
+                            <ImageView
+                                android:id="@+id/Select_Car_ImageView"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/home_car_select"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"/>
+
+                            <!-- 자동차 선택 TextView -->
+                            <TextView
+                                android:id="@+id/Select_Car_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:text="자동차 선택"
+                                android:textSize="20sp"
+                                android:textColor="#FFF"
+                                android:fontFamily="@font/nanumsquare_acb"
+                                android:gravity="center"
+                                android:layout_alignTop="@+id/Select_Car_ImageView"
+                                android:layout_toRightOf="@+id/Select_Car_ImageView"
+                                android:layout_marginLeft="10dp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <!-- 중간 나누는 흰색 선 View -->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="#FFF"/>
+
+                    <!-- 가상 튜닝 하기 Layout -->
+                    <RelativeLayout
+                        android:id="@+id/Unity_Button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true">
+
+                            <!-- 가상 튜닝 하기 ImageView -->
+                            <ImageView
+                                android:id="@+id/Unity_ImageView"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/home_car_tuning"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"/>
+
+                            <!-- 가상 튜닝 하기 TextView -->
+                            <TextView
+                                android:id="@+id/Unity_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:text="가상 튜닝 하기"
+                                android:textSize="20sp"
+                                android:textColor="#FFF"
+                                android:fontFamily="@font/nanumsquare_acb"
+                                android:gravity="center"
+                                android:layout_alignTop="@+id/Unity_ImageView"
+                                android:layout_toRightOf="@+id/Unity_ImageView"
+                                android:layout_marginLeft="10dp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- 자동차 튜닝 정보 및 광고를 띄울 ViewPager -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/Home_SlideViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/Home_Car_Layout"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="20dp"
+                android:overScrollMode="never"/>
+
+            <!-- ViewPager Indicator -->
+            <LinearLayout
+                android:id="@+id/Home_ViewPager_Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_below="@+id/Home_SlideViewPager"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

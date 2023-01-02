@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 뒤로 가기 버튼 Layout -->
+    <FrameLayout
+        android:id="@+id/Community_Contents_Back"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="13dp">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="27dp"
+            android:src="@drawable/back_button"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <!-- ScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:layout_below="@+id/Community_Contents_Back"
+        android:layout_above="@+id/Community_Contents_ViewLike_Comments"
+        android:layout_marginTop="20dp">
+
+        <!-- ScrollView 자식 객체를 감싸는 Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F9F9F9">
+
+            <!-- 글의 제목, 작성자, 시간이 들어가는 Layout -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/top_edge">
+
+                <!-- 글 제목 TextView -->
+                <TextView
+                    android:id="@+id/Community_Contents_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:text="글 제목"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/nanumsquare_acb"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginHorizontal="30dp"/>
+
+                <!-- 닉네임 TextView -->
+                <TextView
+                    android:id="@+id/Community_Contents_NickName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:text="닉네임"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/nanumsquare_acb"
+                    android:layout_below="@+id/Community_Contents_Title"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="30dp"/>
+
+                <!-- 작성 시간 정보 TextView -->
+                <TextView
+                    android:id="@+id/Community_Contents_WriteTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:text="2021/03/08"
+                    android:gravity="center"
+                    android:fontFamily="@font/nanumsquare_acb"
+                    android:layout_alignTop="@+id/Community_Contents_NickName"
+                    android:layout_toLeftOf="@+id/Community_Contents_Views"
+                    android:layout_marginRight="15dp"/>
+
+                <!-- 조회수 TextView -->
+                <TextView
+                    android:id="@+id/Community_Contents_Views"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:text="조회수: 456"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/nanumsquare_acb"
+                    android:layout_alignTop="@+id/Community_Contents_NickName"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"/>
+
+            </RelativeLayout>
+
+            <!-- 글 내용을 감싸는 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_edge"
+                android:orientation="vertical"
+                android:paddingHorizontal="30dp">
+
+                <!-- 글 내용 TextView -->
+                <TextView
+                    android:id="@+id/Community_Contents_Contents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="글 내용"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/nanumsquare_acb"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="50dp"/>
+
+                <!-- 글 사진 내용 ImageView 1 -->
+                <ImageView
+                    android:id="@+id/Community_Contents_ImageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="50dp"
+                    android:visibility="gone"/>
+
+                <!-- 글 사진 내용 ImageView 2 -->
+                <ImageView
+                    android:id="@+id/Community_Contents_ImageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="50dp"
+                    android:visibility="gone"/>
+
+                <!-- 글 사진 내용 ImageView 3 -->
+                <ImageView
+                    android:id="@+id/Community_Contents_ImageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="50dp"
+                    android:visibility="gone"/>
+
+                <!-- 글 사진 내용 ImageView 4 -->
+                <ImageView
+                    android:id="@+id/Community_Contents_ImageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="50dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <!-- 댓글 내용이 들어가는 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_edge_gray"
+                android:orientation="vertical">
+
+                <!-- 댓글 TextView -->
+                <TextView
+                    android:id="@+id/Community_Contents_Comments_Count1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="댓글 1"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/nanumsquare_acb"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"/>
+
+                <!-- 댓글 RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Community_Contents_Comments_RecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 좋아요와 댓글 버튼이 들어가는 Layout -->
+    <LinearLayout
+        android:id="@+id/Community_Contents_ViewLike_Comments"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/top_edge">
+
+        <!-- 좋아요 버튼 Layout -->
+        <RelativeLayout
+            android:id="@+id/Community_Contents_ViewLike_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <!-- 좋아요 TextView -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="좋아요"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/nanumsquare_acb"/>
+
+                <!-- 좋아요 ImageView -->
+                <ImageView
+                    android:id="@+id/Community_Contents_ViewLike_ImageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/like_empty"
+                    android:scaleType="center"/>
+
+                <!-- 좋아요 숫자 TextView -->
+                <TextView
+                    android:id="@+id/Community_Contents_ViewLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="4"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/nanumsquare_aceb"
+                    android:textColor="#B7BCFF"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- 가운데 선 View -->
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#dcdcdc"
+            android:layout_marginVertical="10dp"/>
+
+        <!-- 댓글 버튼 Layout -->
+        <RelativeLayout
+            android:id="@+id/Community_Comments_Comments_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <!-- 댓글 TextView -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="댓글"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/nanumsquare_acb"/>
+
+                <!-- 댓글 ImageView -->
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/comment"
+                    android:scaleType="center"/>
+
+                <!-- 댓글 숫자 TextView -->
+                <TextView
+                    android:id="@+id/Community_Contents_Comments_Count2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="6"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/nanumsquare_aceb"
+                    android:textColor="#B7BCFF"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

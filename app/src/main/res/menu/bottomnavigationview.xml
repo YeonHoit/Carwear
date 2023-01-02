@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Home Button -->
+    <item
+        android:id="@+id/Home_Button"
+        android:icon="@drawable/web_page_home_gray"
+        android:title="홈"
+        android:enabled="true" />
+
+    <!-- Community Button -->
+    <item
+        android:id="@+id/Community_Button"
+        android:icon="@drawable/ic_contacts_gray"
+        android:title="커뮤니티"
+        android:enabled="true" />
+
+    <!-- TuningShop Button -->
+    <item
+        android:id="@+id/Tuning_Shop_Button"
+        android:icon="@drawable/ic_store_mall_directory_gray"
+        android:title="튜닝샵"
+        android:enabled="true"/>
+
+    <!-- Alert Button -->
+    <item
+        android:id="@+id/Alert_Button"
+        android:icon="@drawable/alarm_bell_gray"
+        android:title="알림"
+        android:enabled="true"/>
+
+    <!-- Menu Button -->
+    <item
+        android:id="@+id/Menu_Button"
+        android:icon="@drawable/menu_options_gray"
+        android:title="메뉴"
+        android:enabled="true"/>
+</menu>

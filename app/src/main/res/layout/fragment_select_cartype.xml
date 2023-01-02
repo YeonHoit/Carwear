@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <!-- 뒤로 가기 버튼 Layout -->
+    <FrameLayout
+        android:id="@+id/SelectCarType_Back_Button"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="13dp">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="27dp"
+            android:src="@drawable/back_button"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <!-- 차종 List RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/SelectCarType_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_below="@+id/SelectCarType_Back_Button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

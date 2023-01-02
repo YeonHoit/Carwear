@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Carstyle</string>
+    <!-- 카카오 앱 키 -->
+    <string name="kakao_app_key">685ec37c39a89558848c2dc444ed5cf4</string>
+    <!-- Unity string -->
+    <string name="game_view_content_description">Game view</string>
+
+    <!-- Ted Permission string -->
+    <string name="permission_1">[설정] > [권한] 에서 권한을 허용할 수 있습니다.</string>
+    <string name="permission_2">사진 및 파일을 저장하기 위하여 접근 권한이 필요합니다.</string>
+    
+    <string-array name="retouch_delete">
+        <item>"수정"</item>
+        <item>"삭제"</item>
+    </string-array>
+    
+    <string-array name="report">
+        <item>"신고"</item>
+    </string-array>
+
+    <string-array name="delete">
+        <item>"삭제"</item>
+    </string-array>
+
+</resources>

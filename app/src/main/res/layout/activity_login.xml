@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 로그인 화면 배경 Layout -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login_background">
+
+    <!-- 로그인 버튼 위쪽 빈공간 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="3" />
+
+    <!-- 로그인 버튼 두개가 들어가는 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <!-- 네이버 로그인 버튼 위쪽 빈공간 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2" />
+
+        <!-- 네이버 로그인 버튼이 들어가는 Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="4"
+            android:visibility="gone">
+
+            <!-- 네이버 로그인 버튼 왼쪽 빈 공간 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1" />
+
+            <!-- 네이버 로그인 버튼 -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7">
+
+                <!-- 네이버 로그인 버튼 -->
+                <com.nhn.android.naverlogin.ui.view.OAuthLoginButton
+                    android:id="@+id/Naver_Login_Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/Naver_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/naver" />
+
+            </FrameLayout>
+
+            <!-- 네이버 로그인 버튼 오른쪽 빈 공간 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- 네이버 로그인 버튼과 카카오 로그인 버튼 사이 빈공간 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1" />
+
+        <!-- 카카오 로그인 버튼이 들어가는 Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="4">
+
+            <!-- 카카오 로그인 버튼 왼쪽 빈 공간 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1" />
+
+            <!-- 카카오 로그인 버튼 -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7">
+
+                <!-- 카카오 로그인 버튼 -->
+                <com.kakao.usermgmt.LoginButton
+                    android:id="@+id/Kakao_Login_Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/Kakao_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/kakao" />
+
+            </FrameLayout>
+
+            <!-- 카카오 로그인 버튼 오른쪽 빈 공간 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- 카카오 로그인 버튼 아래쪽 빈공간 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="4" />
+
+    </LinearLayout>
+
+</LinearLayout>

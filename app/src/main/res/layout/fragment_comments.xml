@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Comments_Main_Panel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:background="#FFFFFF"
+    app:umanoDragView="@id/Comments_Drawer"
+    app:umanoPanelHeight="75dp"
+    app:umanoOverlay="true"
+    app:umanoShadowHeight="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 상단 바 Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+
+            <!-- 뒤로 가기 버튼 위쪽 빈 공간 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical" />
+
+            <!-- 뒤로 가기 버튼이 들어가는 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!-- 뒤로 가기 버튼 왼쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3" />
+
+                <!-- 뒤로 가기 버튼이 들어가는 Layout -->
+                <FrameLayout
+                    android:id="@+id/Comments_Back"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/back_button"
+                        android:layout_gravity="center" />
+
+                </FrameLayout>
+
+                <!-- 뒤로 가기 버튼 오른쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8.7"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 댓글이 표시되는 ScrollView -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6.6"
+            android:background="@drawable/top_edge_gray"
+            android:fillViewport="true">
+
+            <!-- ScrollView 하위 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 댓글 RecyclerView 위쪽 빈 공간 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <!-- 댓글 RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Comments_RecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <!-- 밑에서 부터 올라오는 Sliding Panel Layout -->
+    <RelativeLayout
+        android:id="@+id/Comments_Drawer"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="#FFF">
+
+        <!-- 댓글 작성 Layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true">
+
+            <!-- 댓글 입력 EditText -->
+            <MultiAutoCompleteTextView
+                android:id="@+id/Comments_EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:background="@drawable/round_edit_text"
+                android:hint="댓글을 입력해 주세요"
+                android:paddingLeft="20dp"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toLeftOf="@+id/Comments_Send_Button"
+                android:layout_marginRight="20dp"
+                android:completionThreshold="1"
+                android:paddingVertical="10dp"/>
+
+            <!-- 댓글 입력 모형 TextView -->
+            <TextView
+                android:id="@+id/Comments_EditText_OverView"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:background="@drawable/round_edit_text"
+                android:text="댓글을 입력해 주세요"
+                android:paddingLeft="20dp"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toLeftOf="@+id/Comments_Send_Button"
+                android:layout_marginRight="20dp"/>
+
+            <!-- 댓글 등록 버튼 ImageView -->
+            <FrameLayout
+                android:id="@+id/Comments_Send_Button"
+                android:layout_width="30dp"
+                android:layout_height="45dp"
+                android:layout_alignTop="@+id/Comments_EditText"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/send_comment" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

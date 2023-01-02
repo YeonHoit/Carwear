@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@drawable/community_post_edge">
+
+    <!-- 알림 날짜를 표시해주는 TextView -->
+    <TextView
+        android:id="@+id/Alert_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquare_acb"
+        android:text="2020/12/30"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp" />
+
+    <!-- 알림 종류 별 아이콘 ImageView -->
+    <ImageView
+        android:id="@+id/Alert_ImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/notice_alert"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"/>
+
+    <!-- 알림 제목이 들어가는 TextView -->
+    <TextView
+        android:id="@+id/Alert_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="8월 차량관리 리포트"
+        android:fontFamily="@font/nanumsquare_acb"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/Alert_ImageView"
+        android:layout_toRightOf="@+id/Alert_ImageView"
+        android:layout_marginLeft="20dp"/>
+
+    <!-- 알림 내용이 들어가는 TextView -->
+    <TextView
+        android:id="@+id/Alert_Contents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="아반떼 MD의 리포트를 확인하세요!"
+        android:fontFamily="@font/nanumsquare_acb"
+        android:layout_alignBottom="@+id/Alert_ImageView"
+        android:layout_toRightOf="@+id/Alert_ImageView"
+        android:layout_marginLeft="20dp" />
+
+</RelativeLayout>

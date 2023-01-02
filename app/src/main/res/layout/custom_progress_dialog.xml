@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 로딩 아이콘이 삽입되는 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:orientation="horizontal">
+
+        <!-- 로딩 아이콘 왼쪽 빈 공간 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+        <!-- 로딩 아이콘 ProgressBar -->
+        <ProgressBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:indeterminateDrawable="@drawable/progress_image" />
+
+        <!-- 로딩 아이콘 오른쪽 빈 공간 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+    <!-- ProgressBar와 TextView 사이의 빈 공간 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+
+    <!-- 로딩 중이라는 Text를 띄우는 TextView -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="잠시만 기다려 주세요..."
+        android:textColor="#FFF"
+        android:gravity="center"
+        android:fontFamily="@font/nanumsquare_acb"/>
+
+</LinearLayout>
